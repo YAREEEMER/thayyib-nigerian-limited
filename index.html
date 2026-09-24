@@ -3,36 +3,407 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Thayyib Nigerian Limited</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#172033;line-height:1.6}
-header{background:#08233f;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:bold}
-nav a{color:white;text-decoration:none;margin-left:20px}
-.hero{background:linear-gradient(135deg,#eef7ff,#fff);padding:80px 7%;text-align:center}
-.hero h1{font-size:45px;color:#08233f;margin-bottom:15px}
-.hero h1 span{color:#0875d1}
-.hero p{font-size:18px;color:#667085;max-width:700px;margin:auto}
-.btn{display:inline-block;margin-top:25px;padding:14px 24px;background:#08233f;color:white;text-decoration:none;border-radius:8px;font-weight:bold}
-section{padding:70px 7%}
-.title{text-align:center;color:#08233f;font-size:35px;margin-bottom:40px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.card{padding:30px;border:1px solid #e3e8ef;border-radius:15px;text-align:center;box-shadow:0 8px 25px #0000000d}
-.card .icon{font-size:45px}
-.card h3{color:#08233f;margin:12px 0}
-.card p{color:#667085}
-.about{background:#f5f8fc;text-align:center}
-.about p{max-width:750px;margin:auto;color:#667085}
-.contact{background:#08233f;color:white;text-align:center}
-.contact h2{color:white}
-.contact p{margin:10px 0}
-.contact a{color:white;text-decoration:none}
-footer{background:#061a2f;color:#ccc;text-align:center;padding:20px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#172033;
+  line-height:1.6;
+  background:#fff;
+}
+
+header{
+  background:#071522;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:2px solid #d4af37;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-mark{
+  width:48px;
+  height:48px;
+  border:3px solid #d4af37;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#d4af37;
+  font-size:23px;
+  font-weight:bold;
+}
+
+.logo-text{
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing:.5px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(rgba(4,15,25,.82),rgba(4,15,25,.82)),
+  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85")
+  center/cover;
+}
+
+.hero-content{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+  color:white;
+}
+
+.badge{
+  display:inline-block;
+  color:#d4af37;
+  border:1px solid #d4af37;
+  padding:8px 15px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.hero h1{
+  font-size:clamp(40px,6vw,68px);
+  line-height:1.05;
+  max-width:800px;
+  margin-bottom:20px;
+}
+
+.gold{
+  color:#d4af37;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:18px;
+  color:#e4e8ed;
+}
+
+.buttons{
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 23px;
+  border-radius:7px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+.gold-btn{
+  background:#d4af37;
+  color:#071522;
+}
+
+.white-btn{
+  border:1px solid white;
+  color:white;
+}
+
+section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title small{
+  color:#a17b14;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  color:#071522;
+  font-size:38px;
+  margin:8px 0;
+}
+
+.section-title p{
+  color:#687386;
+  max-width:650px;
+  margin:auto;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.card-img{
+  height:190px;
+  background-size:cover;
+  background-position:center;
+}
+
+.card-content{
+  padding:23px;
+}
+
+.card h3{
+  color:#071522;
+  margin-bottom:8px;
+  font-size:20px;
+}
+
+.card p{
+  color:#667085;
+  font-size:14px;
+}
+
+.icon{
+  color:#d4af37;
+  font-size:28px;
+  margin-bottom:5px;
+}
+
+.about{
+  background:#f6f7f9;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-img{
+  min-height:430px;
+  border-radius:18px;
+  background:
+  url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
+}
+
+.about h2{
+  color:#071522;
+  font-size:38px;
+  margin:10px 0 20px;
+}
+
+.about p{
+  color:#667085;
+  margin-bottom:15px;
+}
+
+.check{
+  margin-top:20px;
+}
+
+.check div{
+  margin:10px 0;
+  font-weight:bold;
+}
+
+.check div::before{
+  content:"✓";
+  color:#d4af37;
+  margin-right:10px;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.project{
+  height:280px;
+  border-radius:15px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.project::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+.project-title{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  z-index:2;
+}
+
+.cta{
+  background:#071522;
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  color:#d7dee6;
+  max-width:650px;
+  margin:auto;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  padding:30px 20px;
+  border:1px solid #e5e7eb;
+  border-radius:15px;
+  text-align:center;
+}
+
+.contact-card strong{
+  display:block;
+  color:#071522;
+  margin:10px 0;
+}
+
+.contact-card a{
+  color:#866713;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+footer{
+  background:#040c14;
+  color:#b9c1c9;
+  text-align:center;
+  padding:25px;
+  font-size:13px;
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  z-index:2000;
+}
+
+@media(max-width:900px){
+  .services{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 @media(max-width:700px){
-nav{display:none}
-.hero h1{font-size:35px}
-.services{grid-template-columns:1fr}
+  nav{
+    display:none;
+  }
+
+  .logo-text{
+    font-size:14px;
+  }
+
+  .hero{
+    min-height:600px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2,
+  .about h2,
+  .cta h2{
+    font-size:30px;
+  }
 }
 </style>
 </head>
@@ -40,76 +411,361 @@ nav{display:none}
 <body>
 
 <header>
-<div class="logo">THAYYIB NIGERIAN LIMITED</div>
+<div class="nav">
+
+<div class="logo">
+<div class="logo-mark">T</div>
+<div class="logo-text">THAYYIB NIGERIAN LIMITED</div>
+</div>
+
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
+<a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
+
+</div>
 </header>
 
 <section class="hero" id="home">
-<h1>Reliable Services for <span>Travel & Property</span></h1>
+
+<div class="hero-content">
+
+<div class="badge">
+ENGINEERING • CONSTRUCTION • REAL ESTATE
+</div>
+
+<h1>
+Building Quality.<br>
+Creating <span class="gold">Value.</span>
+</h1>
+
 <p>
-Welcome to Thayyib Nigerian Limited. We provide professional
-real estate, flight booking and Chinese visa services.
+Thayyib Nigerian Limited provides professional civil engineering,
+construction, real estate, consultation and architectural design
+services for clients across Nigeria.
 </p>
-<a class="btn" href="https://wa.me/2348057593808">Chat on WhatsApp</a>
+
+<div class="buttons">
+
+<a class="btn gold-btn"
+href="https://wa.me/2348022645276">
+Chat on WhatsApp
+</a>
+
+<a class="btn white-btn"
+href="#services">
+Our Services
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="services">
-<h2 class="title">Our Services</h2>
+
+<div class="container">
+
+<div class="section-title">
+
+<small>WHAT WE DO</small>
+
+<h2>Our Professional Services</h2>
+
+<p>
+Reliable solutions for construction, property, design and
+professional consultation.
+</p>
+
+</div>
 
 <div class="services">
 
 <div class="card">
-<div class="icon">🏠</div>
+
+<div class="card-img"
+style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85')">
+</div>
+
+<div class="card-content">
+
+<div class="icon">▦</div>
+
+<h3>Civil Engineering & Construction</h3>
+
+<p>
+Professional construction and civil engineering services
+focused on quality, durability and practical project delivery.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-img"
+style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85')">
+</div>
+
+<div class="card-content">
+
+<div class="icon">◈</div>
+
+<h3>Consultation</h3>
+
+<p>
+Professional project guidance and consultation to help clients
+plan and make informed decisions.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-img"
+style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85')">
+</div>
+
+<div class="card-content">
+
+<div class="icon">⌂</div>
+
+<h3>Architectural Design</h3>
+
+<p>
+Modern and functional architectural concepts designed around
+client requirements and project needs.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-img"
+style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85')">
+</div>
+
+<div class="card-content">
+
+<div class="icon">◆</div>
+
 <h3>Real Estate</h3>
-<p>
-Property services for clients looking to buy, sell or explore real estate opportunities.
-</p>
-</div>
 
-<div class="card">
-<div class="icon">✈️</div>
-<h3>Flight Booking</h3>
 <p>
-Professional assistance with flight reservations and travel arrangements.
+Property and real estate solutions for individuals, families,
+investors and businesses in Nigeria.
 </p>
-</div>
 
-<div class="card">
-<div class="icon">🇨🇳</div>
-<h3>Chinese Visa</h3>
-<p>
-Guidance and support for Chinese visa applications and related travel needs.
-</p>
 </div>
 
 </div>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="about" id="about">
-<h2 class="title">About Thayyib Nigerian Limited</h2>
+
+<div class="container about-grid">
+
+<div class="about-img"></div>
+
+<div>
+
+<small style="color:#a17b14;font-weight:bold;letter-spacing:2px">
+ABOUT THAYYIB
+</small>
+
+<h2>
+Professional Service. Practical Results.
+</h2>
+
 <p>
-Thayyib Nigerian Limited is a Nigerian service company providing
-real estate, flight booking and Chinese visa services.
-Our goal is to provide reliable, convenient and professional support
-to our clients.
+Thayyib Nigerian Limited is a Nigerian company providing
+professional engineering, construction, real estate,
+consultation and architectural design services.
 </p>
+
+<p>
+Our goal is to deliver dependable solutions that combine
+technical knowledge, quality workmanship and client-focused
+service.
+</p>
+
+<div class="check">
+
+<div>Quality-focused project delivery</div>
+
+<div>Professional consultation</div>
+
+<div>Modern architectural concepts</div>
+
+<div>Real estate solutions</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="contact" id="contact">
-<h2 class="title">Contact Us</h2>
-<p>📞 <a href="tel:+2348057593808">+234 805 759 3808</a></p>
-<p>✉️ <a href="mailto:abdurraufdayyib@gmail.com">abdurraufdayyib@gmail.com</a></p>
-<a class="btn" href="https://wa.me/2348057593808">Message Us on WhatsApp</a>
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>OUR WORK</small>
+
+<h2>Areas of Expertise</h2>
+
+<p>
+Professional solutions for residential, commercial and
+development projects.
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project"
+style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85')">
+
+<div class="project-title">
+Commercial Construction
+</div>
+
+</div>
+
+<div class="project"
+style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85')">
+
+<div class="project-title">
+Modern Property
+</div>
+
+</div>
+
+<div class="project"
+style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=85')">
+
+<div class="project-title">
+Residential Development
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>Have a Project in Mind?</h2>
+
+<p>
+Talk to Thayyib Nigerian Limited about your construction,
+engineering, architectural design, consultation or real estate needs.
+</p>
+
+<div class="buttons">
+
+<a class="btn gold-btn"
+href="https://wa.me/2348022645276">
+Contact Us on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>CONTACT US</small>
+
+<h2>Let's Work Together</h2>
+
+<p>
+We are ready to discuss your next project.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+📞
+
+<strong>Phone / WhatsApp</strong>
+
+<a href="tel:+2348022645276">
++234 802 264 5276
+</a>
+
+</div>
+
+<div class="contact-card">
+
+✉️
+
+<strong>Email</strong>
+
+<a href="mailto:abdurraufdayyib@gmail.com">
+abdurraufdayyib@gmail.com
+</a>
+
+</div>
+
+<div class="contact-card">
+
+🇳🇬
+
+<strong>Location</strong>
+
+Serving clients across Nigeria
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<a class="whatsapp"
+href="https://wa.me/2348022645276">
+☎
+</a>
 
 <footer>
-<p>© 2026 Thayyib Nigerian Limited. All rights reserved.</p>
+
+© 2026 Thayyib Nigerian Limited.
+All Rights Reserved.
+
 </footer>
 
 </body>
-  </html>
+</html>
